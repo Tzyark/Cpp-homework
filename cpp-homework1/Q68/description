@@ -1,0 +1,27 @@
+﻿初始化一个空字符串s。实现一系列字符串操作命令：append，replace，reverse，changecase，length，print。  
+append命令表示在字符串s末尾添加指定字符串，格式为append abc。  
+replace命令要求替换字符串s中所有的被替换字符串a为替换字符串b，格式为replace a b。  
+reverse命令表示翻转整个字符串，格式为reverse。  
+changecase命令表示转换字符串s中的大小写，格式为changecase low(up)。length命令计算当前字符串s的长度并输出。  
+print命令将字符串s输出。  
+输入m，表示命令条数，接着输入m条命令，输出命令的执行结果。
+
+
+Input:  
+9  
+append abcd  
+print    
+replace ab cd  
+print  
+reverse   
+print  
+changecase up  
+print  
+length   
+
+Output:  
+abcd  
+cdcd  
+dcdc  
+DCDC  
+4（无换行符）
