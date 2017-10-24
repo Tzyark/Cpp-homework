@@ -1,0 +1,45 @@
+使用栈判断给定的代码片段中的TAG是否符合规范
+规范如下:
+1.代码必须由有效的TAG对包裹
+2.有效TAG对形式：<TAG_NAME>TAG_CONTENT</TAG_NAME>.其中，<TAG_NAME>与</TAG_NAME>是起始TAG与结束TAG，两个TAG的TAG_NAME必须一样。
+3.TAG_NAME必须是大写字母并且长度为1-9。否则不规范
+4.TAG_CONTENT为任意字符也可以为空，可能含有TAG对且必须满足三种成对关系，成对关系如下：<TAG>CONTENT</TAG>、（CONTENT）、<!--COMMENT-->,其中CONTENT要求和TAG_CONTENT一样，COMMENT要求见第5点
+5.TAG_CONTENT中可能含有<!--COMMENT-->形式的字符串，其中COMMENT内容可以为任意字符，包括不成对的<TAG>、、()等。（即COMMENT内容可以忽略，不影响判断）
+
+
+例1：
+输入：
+<DIV>Hello World!</DIV>
+
+输出:
+True(没有换行符)
+
+例2：
+输入:
+<DIV>Hello World!</div>
+
+输出:
+False(没有换行符)
+
+例3：
+输入：
+<DIV>Hello World!<!--example<div>--></DIV>
+
+输出：
+True(没有换行符)
+
+例4:
+输入：
+<DIV>Hello World! < ( </ </DIV>
+
+输出：
+False(没有换行符)
+
+例5:
+输入：
+<DIV>Hello World! <> </DIV>
+
+输出：
+False(没有换行符)
+
+
