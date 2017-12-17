@@ -2,8 +2,6 @@
 #include <stack>
 #include <string>
 
-#include <fstream>
-#include <time.h>
 using namespace std;
 
 const string T = "True";
